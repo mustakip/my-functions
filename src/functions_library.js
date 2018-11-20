@@ -1,7 +1,7 @@
-const filter = function(inputArray,inputFunction) {
+const filter = function(callbackFunction,inputArray) {
   let filteredElementsArray = [];
   for(let index = 0;index < inputArray.length;index++) {
-    if(inputFunction(inputArray[index]) == true ) {
+    if(callbackFunction(inputArray[index]) == true ) {
       filteredElementsArray.push(inputArray[index]);
     }
   }
@@ -9,3 +9,19 @@ const filter = function(inputArray,inputFunction) {
 }
 
 exports.filter = filter;
+
+//-----------------------------------------------------------------------//
+
+const map = function(callbackFunction,inputArray) {
+  let mappedArray = [];
+  for(let index = 0; index < inputArray.length; index++) {
+    mappedArray.push(callbackFunction(inputArray[index]));
+  }
+  return mappedArray;
+}
+
+exports.map = map;
+
+//-----------------------------------------------------------------------//
+
+
