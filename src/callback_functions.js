@@ -62,7 +62,16 @@ const checkAscending = function(stateTillNow,number) {
 
 
 //-----------------------------------------------------------------------//
-module.exports = {isPrime,isEven,isOdd,increment_5,mapLength,generateStars};
+module.exports = {isPrime,
+  isEven,
+  isOdd,
+  increment_5,
+  mapLength,
+  generateStars,
+  add,
+  findGreater,
+  checkAscending
+};
 
 
 
