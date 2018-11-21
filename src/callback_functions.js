@@ -39,6 +39,27 @@ const generateStars = function(noOfStars) {
   return repeatStars(noOfTimes);
 }
 
+//-----------------------------------------------------------------------//
+const add = function(number1,number2) {
+  return number1 + number2;
+}
+
+const findGreater = function(number1,number2) {
+  let greatestNo = number1;
+  if(number2 > number1) {
+    greatestNo = number2;
+  }
+  return greatestNo;
+}
+
+const checkAscending = function(stateTillNow,number) {
+  let {checkedNumber,state} = stateTillNow;
+  if(number >= checkedNumber && state == true) {
+    return {checkedNumber : number,state : true};
+  }
+  return {checkedNumber : number,state : false};
+}
+
 
 //-----------------------------------------------------------------------//
 module.exports = {isPrime,isEven,isOdd,increment_5,mapLength,generateStars};
